@@ -55,5 +55,5 @@ def hesapla(boy, kilo, *args):
 #     return output
 
 
-
+# %% Quiz
 
