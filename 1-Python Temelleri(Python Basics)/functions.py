@@ -32,3 +32,28 @@ sonuc = benim_ilk_func(var1, var2)
 def deneme1(): 
     print("bu benim ikinci denemem")
 
+# %% Default and Flexible Functions
+
+# default f : cemberin cevre uzunlugu = 2*pi*r
+
+def cember_cevre(r, pi = 3.14):
+    """
+    input(parametre): r,pi
+    output : cemberin cevresi
+    """
+    output = 2* pi *r
+    return output
+
+# flexiable
+def hesapla(boy, kilo, *args):
+    print(args)
+    output = boy+kilo
+    return output
+
+# def hesapla(boy, kilo, yas):
+#     output = (boy+kilo) * yas
+#     return output
+
+
+
+
