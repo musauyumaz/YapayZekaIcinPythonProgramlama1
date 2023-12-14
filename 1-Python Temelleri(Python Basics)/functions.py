@@ -57,3 +57,27 @@ def hesapla(boy, kilo, *args):
 
 # %% Quiz
 
+yas = 10
+name = "ali"
+soyisim = "veli"
+
+def function_quiz(yas, name, *args, ayakkabiNumarasi = 35):
+    print("Cocugun ismi : " , name, " yasi: ", yas, " ayak numarasi: ", ayakkabiNumarasi)
+    print(type(name))
+    print(float(yas))
+    
+    output = args[0]*yas
+    return output
+
+sonuc = function_quiz(yas, name,soyisim)
+
+print("args[0]*yas: ", sonuc)
+
+# %% Lambda Function
+def hesapla(x):
+    output = x*x
+    return output
+
+
+
+
