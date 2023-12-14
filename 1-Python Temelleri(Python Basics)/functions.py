@@ -75,9 +75,12 @@ print("args[0]*yas: ", sonuc)
 
 # %% Lambda Function
 def hesapla(x):
-    output = x*x
-    return output
+    return x*x
 
+sonuc = hesapla(3)
+
+sonuc2 = lambda x: x*x
+print(sonuc2(2))
 
 
 
