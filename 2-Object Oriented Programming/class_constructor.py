@@ -32,3 +32,18 @@ print("yeni maas: ", calisan1.maas)
 calisan2 = Calisan("Ayse", "Tınmaz", 200)
 
 calisan2.counter
+
+# %% class example
+
+calisan2 = Calisan("Ayse", "Tınmaz", 200)
+calisan3 = Calisan("Fatma", "Yılmaz", 600)
+calisan4 = Calisan("gençay", "Yıldız", 1500)
+
+
+liste =  [calisan1, calisan2, calisan3, calisan4]
+
+maxi_maas = liste[0].maas
+
+for i in liste:
+    if i.maas > maxi_maas:
+        maxi_maas = i.maas
