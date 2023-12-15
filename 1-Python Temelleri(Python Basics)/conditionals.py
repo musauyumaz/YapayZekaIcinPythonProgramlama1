@@ -26,3 +26,10 @@ if 6 in liste :
 else:
     print("hayır")
     
+# %% 
+
+def centuryToYear(year):
+    yuzyil = (year//100) + 1 if year % 100 != 0 else year // 100
+    return yuzyil
+
+print(centuryToYear(200))
