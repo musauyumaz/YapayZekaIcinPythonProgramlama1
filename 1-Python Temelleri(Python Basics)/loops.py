@@ -32,3 +32,21 @@ count = 0
 while (each < sinir):
     count = count + liste[each]
     each = each + 1
+    
+# %% Quiz
+
+liste = [1,2,3,4,5,6,4,23,67,21,-500,23,451,67]
+
+min(liste)
+
+minSayi = liste[0]
+for i in liste:
+    if i < minSayi:
+        minSayi = i
+
+print(minSayi)
+        
+        
+        
+        
+        
