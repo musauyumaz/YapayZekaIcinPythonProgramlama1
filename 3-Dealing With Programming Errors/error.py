@@ -32,3 +32,31 @@ try:
     a = k/zero
 except ZeroDivisionError:
     a= 0
+    
+# index error
+list1 = [ 1,2,3,4]
+list1[15]
+
+# module not found error
+import numpyy
+
+# filenot found error
+import pandas as pd
+pd.read_csv("asd")
+
+# type error
+"2" + 2
+
+# value error
+int("sad")
+
+
+try:
+    1/0
+except :
+    print("except")
+else:
+    print("else")
+finally:
+    print("done")
+
