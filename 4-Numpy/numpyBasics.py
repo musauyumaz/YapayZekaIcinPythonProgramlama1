@@ -112,3 +112,11 @@ array5 = np.array([[1,2],[3,4],[4,5]])
 array5.reshape(2,3)
 
 
+# %% Stacking arrays
+array1 = np.array([[1,2],[3,4]])
+array2 = np.array([[-1,-2], [-3,-4]])
+
+array3 = np.vstack((array1,array2))
+
+array4 = np.hstack((array1,array2))
+
