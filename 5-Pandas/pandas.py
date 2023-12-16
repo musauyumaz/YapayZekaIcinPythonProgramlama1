@@ -20,3 +20,23 @@ print(dataframe1.info())
 print(dataframe1.dtypes)
 
 print(dataframe1.describe()) # numeric feature columns (age, maas)
+
+# %% indexing and slicing
+
+print(dataframe1["NAME"])
+print(dataframe1["AGE"])
+print(dataframe1.AGE)
+
+dataframe1["yeni feature"] = [-1,-2,-3,-4,-5,-6]
+
+print(dataframe1.loc[:,"AGE"])
+
+print(dataframe1.loc[:3,"AGE"])
+
+print(dataframe1.loc[:3,["AGE","NAME"]])
+
+print(dataframe1.loc[::-1,:])
+
+print(dataframe1.loc[:, :"NAME"])
+
+print(dataframe1.iloc[:, 2])
