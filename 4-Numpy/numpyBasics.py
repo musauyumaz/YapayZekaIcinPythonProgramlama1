@@ -94,6 +94,21 @@ print(array1[1,1:4])
 print(array1[-1,:])
 print(array1[:,-1])
 
+# %% shape manipulation
+array = np.array([[1,2,3],[4,5,6],[7,8,9]])
 
+array
+
+# flatten
+a = array.ravel()
+array2 = a.reshape(3,3)
+
+arrayT = array2.T
+arrayT
+
+print(arrayT.shape)
+
+array5 = np.array([[1,2],[3,4],[4,5]])
+array5.reshape(2,3)
 
 
