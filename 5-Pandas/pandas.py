@@ -40,3 +40,15 @@ print(dataframe1.loc[::-1,:])
 print(dataframe1.loc[:, :"NAME"])
 
 print(dataframe1.iloc[:, 2])
+
+# %% filtering
+
+filtre1 = dataframe1.MAAS > 200
+
+filtrelenmis_data = dataframe1[filtre1]
+
+filtre2 = dataframe1.AGE < 20
+
+dataframe1[filtre1 & filtre2]
+
+dataframe1[dataframe1.AGE > 60]
