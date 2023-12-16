@@ -82,3 +82,17 @@ age = dataframe1.age
 
 
 data_h_concat = pd.concat([maas,age], axis=1)
+
+# %% transforming data 
+
+dataframe1["list_comp"] = [ i * 2 for i in dataframe1.age]
+
+# apply
+
+def multiply(age):
+    return age * 2
+
+dataframe1["apply_metodu"] = dataframe1.age.apply(multiply)
+
+
+
