@@ -55,12 +55,30 @@ dataframe1[dataframe1.AGE > 60]
 
 # %% list comprehension
 import numpy as np
-#ortalama_maas = dataframe1.MAAS.mean()
+ortalama_maas = dataframe1.maas.mean()
 
-#ortalama_maas_np = np.mean(dataframe1.MAAS)
+ortalama_maas_np = np.mean(dataframe1.maas)
 
 dataframe1["maas_seviyesi"] = ["düşük" if ortalama_maas > i else "yüksek" for i in dataframe1.maas]
 
 dataframe1.columns = [i.lower() for i in dataframe1.columns]
 
 dataframe1.columns = [i.split()[0] + "_" + i.split()[1] if len(i.split()) > 1 else i for i in dataframe1.columns]
+
+
+# %% drop and concatenating
+
+# dataframe1.drop(["yeni_feature"],axis=1, inplace=True)
+
+data1 = dataframe1.head()
+data2 = dataframe1.tail()
+
+# vertical
+data_concat = pd.concat([data1,data2], axis = 0)
+
+
+maas = dataframe1.maas
+age = dataframe1.age
+
+
+data_h_concat = pd.concat([maas,age], axis=1)
