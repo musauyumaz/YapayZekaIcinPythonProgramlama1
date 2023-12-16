@@ -120,3 +120,33 @@ array3 = np.vstack((array1,array2))
 
 array4 = np.hstack((array1,array2))
 
+# %% convert and copy
+
+liste = [1,2,3,4]
+array = np.array(liste)
+
+liste2 = list(array)
+
+liste2
+type(liste2)
+
+
+a = np.array([1,2,3])
+b = a
+c = a
+
+b[0] = 5
+
+a
+b
+c
+
+d = np.array([1,2,3])
+
+e = d.copy()
+
+f = d.copy()
+
+
+
+
