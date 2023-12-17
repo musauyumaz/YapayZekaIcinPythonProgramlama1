@@ -87,5 +87,19 @@ plt.xlabel("a")
 plt.ylabel("y")
 plt.show()
 
+# %% subplots
 
+df1.plot(grid=True, alpha=0.9,subplots=True)
 
+setosa = df[df.Species == "Iris-setosa"]
+versicolor = df[df.Species == "Iris-versicolor"]
+virginica = df[df.Species == "Iris-virginica"]
+
+plt.subplot(2,1,1)
+plt.plot(setosa.Id,setosa.PetalLengthCm, color = "red", label = "setosa", grid = True)
+plt.ylabel("setosa - PetalLengthCm")
+
+plt.subplot(2,1,2)
+plt.plot(versicolor.Id,versicolor.PetalLengthCm, color = "green", label = "versicolor")
+plt.ylabel("versicolor - PetalLengthCm")
+plt.show()
