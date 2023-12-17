@@ -38,8 +38,8 @@ plt.ylabel("PetalLengthCm")
 plt.legend()
 plt.show()
 
-df1.plot(grid=True, linestyle = ":")
-df1.plot(grid=True, alpha = 0.1)
+plt.plot(grid=True, linestyle = ":")
+plt.plot(grid=True, alpha = 0.1)
 plt.show()
 
 # %% scatter plot
