@@ -57,4 +57,12 @@ plt.xlabel("PetalWidthCm")
 plt.title("scatter plot")
 plt.show()
 
+# %% histogram
+
+plt.hist(setosa.PetalLengthCm, bins=50)
+plt.xlabel("PetalLengthCm values")
+plt.ylabel("frekans")
+plt.title("hist")
+plt.show()
+
 
