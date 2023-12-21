@@ -17,3 +17,20 @@ class Employee(object):
 
 
 employee1 = Employee()
+# %% attribute
+
+class Footballer:
+    
+    football_club = "barcelona"
+    age = 30
+    
+f1 = Footballer()
+
+a = "dene"
+print(a)
+print(f1)
+print(f1.age)
+print(f1.football_club)
+
+f1.football_club = "real madrid"
+print(f1.football_club)
