@@ -96,3 +96,29 @@ result1 = findArea(pi, r)
 result2 = findArea(pi, 10)
 
 print(result1 + result2)
+
+# %% initializer or constructor
+
+class Animal(object):
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age  = age
+        pass
+    
+    def getAge(self):
+        return self.age
+    
+    def getName(self):
+        return self.name
+
+a1 = Animal("dog", 2)
+a1_age = a1.getAge()
+print("animal age: ",a1_age)
+
+a2 = Animal("cat", 4)
+a3 = Animal("Bird", 6)
+
+a1.getName()
+a2.getName()
+a3.getName()
