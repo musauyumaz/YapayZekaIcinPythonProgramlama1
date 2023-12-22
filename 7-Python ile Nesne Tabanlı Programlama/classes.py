@@ -122,3 +122,40 @@ a3 = Animal("Bird", 6)
 a1.getName()
 a2.getName()
 a3.getName()
+
+# %% calculator project
+
+class Calc(object):
+    "calculator"
+    def __init__(self, a, b):
+        "initialize values"
+        self.value1 = a
+        self.value2 = b
+        
+    def add(self):
+        "addtion a+b result -> return result"
+        return self.value1 + self.value2
+    
+    def multiply(self):
+        """
+        multipcliton a*b = result -> return result
+        """
+        return self.value1 * self.value2
+    
+v1 = 5
+v2 = 3
+c1 = Calc(v1, v2)
+add_result = c1.add()
+multiply_result = c1.multiply()  
+
+print(f"Add: {add_result}, Multiply: {multiply_result}")  
+    
+print("Chooose add(1), multiply(2)")
+selection = input("select 1 or 2: ")
+firstValue = input("first value: ")
+secondValue = input("second value: ")
+c2 = Calc(int(firstValue), int(secondValue))
+
+print(f"Add: {c2.add()}, Multiply: {c2.multiply()}")  
+
+
