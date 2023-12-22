@@ -57,4 +57,42 @@ s1.area
 s1.edge = 7
 s1.area1()
 
+# %% methods vs functions
+class Emp(object):
+    age = 25
+    salary = 1000
+    
+    def ageSalaryRatio(self):
+        a = self.age / self.salary
+        print("method:", a)
+        
+    
 
+def ageSalaryRatio(age, salary):
+    a = age / salary  
+    print("function: ",a)
+
+e1 = Emp()
+e1.ageSalaryRatio()
+
+ageSalaryRatio(30, 3000)
+
+
+a = 2 + 4
+a
+
+pi = 3.14
+r = 5
+area = pi * r ** 2
+
+
+def findArea(pi, r):
+    area = pi * r ** 2
+    print(area)
+    return area
+
+result1 = findArea(pi, r)
+
+result2 = findArea(pi, 10)
+
+print(result1 + result2)
