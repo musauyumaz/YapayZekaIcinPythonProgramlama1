@@ -1,4 +1,4 @@
-from rent.py import CarRent, BikeRent, Customer
+from rent import CarRent, BikeRent, Customer
 bike = BikeRent(100)
 car = CarRent(10)
 customer = Customer()
@@ -26,37 +26,37 @@ while True:
                   5.Main Menu
                   6.Exit
                   """)
-            choice = input("Enter choice")
+            choiceb = input("Enter choice: ")
 
             try:
-                choice: int(choice)
+                choiceb= int(choiceb)
             except ValueError:
                 print("It is not integer")
                 continue
 
-            if choice == 1:
+            if choiceb == 1:
                 bike.displayStock()
-                choice = "A"
-            elif choice == 2:
+                choiceb = "A"
+            elif choiceb == 2:
                 customer.rentalTimeB = bike.rentHourly(
                     customer.requestVehicle("bike"))
                 customer.rentalBasisB = 1
                 mainMenu = True
                 print("----------------------")
-            elif choice == 3:
+            elif choiceb == 3:
                 customer.rentalTimeB = bike.rentDaily(
                     customer.requestVehicle("bike"))
                 customer.rentalBasisB = 2
                 mainMenu = True
                 print("----------------------")
-            elif choice == 4:
+            elif choiceb == 4:
                 customer.bill = bike.returnVehicle(
                     customer.returnVehicle("bike"), "bike")
                 customer.rentalBasisB, customer.rentalTimeB, customer.bikes = 0, 0, 0
                 mainMenu = True
-            elif choice == 5:
+            elif choiceb == 5:
                 mainMenu = True
-            elif choice == 6:
+            elif choiceb == 6:
                 break
             else:
                 print("Invalid Input please enter a number 1-6")
@@ -74,7 +74,7 @@ while True:
             choice = input("Enter choice")
 
             try:
-                choice: int(choice)
+                choice= int(choice)
             except ValueError:
                 print("It is not integer")
                 continue
@@ -112,5 +112,3 @@ while True:
             print("Invalid input Please Enter A-B-Q")
             mainMenu = True
         print("Thank you for using the cehicle rental shop")
-                
-        
