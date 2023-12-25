@@ -108,10 +108,56 @@ class BikeRent(VehicleRent):
 
 class Customer:
     def __init__(self):
-        pass
+        self.bikes = 0
+        self.rentalBasisB = 0
+        self.rentalTimeB = 0
 
-    def requestVehicle(self):
-        pass
+        self.cars = 0
+        self.rentalBasisC = 0
+        self.rentalTimeC = 0
 
-    def returnVehicle(self):
-        pass
+    def requestVehicle(self, brand):
+        if brand == "bike":
+            bikes = input("How many bikes would you like to rent?")
+            try:
+                bikes = int(bikes)
+            except ValueError:
+                print("Number should be number")
+
+            if bikes < 1:
+                print("number of bikes should be greated than zero")
+                return -1
+            else:
+                self.bikes = bikes
+            return self.bikes
+
+        elif brand == "car":
+            if brand == "car":
+                cars = input("How many cars would you like to rent?")
+                try:
+                    cars = int(cars)
+                except ValueError:
+                    print("Number should be number")
+
+                if cars < 1:
+                    print("number of cars should be greated than zero")
+                    return -1
+                else:
+                    self.cars = cars
+                return self.cars
+        else:
+            print("Request vehicle error")
+
+    def returnVehicle(self, brand):
+        if brand == "bike":
+            if self.rentalTimeB and self.rentalBasisB and self.bikes:
+                return self.rentalTimeB and self.rentalBasisB and self.bikes
+            else:
+                return 0, 0, 0
+        elif brand == "car":
+            if self.rentalTimeC and self.rentalBasisC and self.cars:
+                return self.rentalTimeC and self.rentalBasisC and self.cars
+            else:
+                return 0, 0, 0
+        else:
+            print("Return vehicle error")
