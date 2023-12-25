@@ -142,6 +142,9 @@ class Calc(object):
         """
         return self.value1 * self.value2
     
+    def division(self):
+        return self.value1 / self.value2
+    
 v1 = 5
 v2 = 3
 c1 = Calc(v1, v2)
@@ -150,12 +153,12 @@ multiply_result = c1.multiply()
 
 print(f"Add: {add_result}, Multiply: {multiply_result}")  
     
-print("Chooose add(1), multiply(2)")
-selection = input("select 1 or 2: ")
+print("Chooose add(1), multiply(2) div(3)")
+selection = input("select 1 or 2 or 3: ")
 firstValue = input("first value: ")
 secondValue = input("second value: ")
 c2 = Calc(int(firstValue), int(secondValue))
 
-print(f"Add: {c2.add()}, Multiply: {c2.multiply()}")  
+print(f"Add: {c2.add()}, Multiply: {c2.multiply()}, division: {c2.division()}")  
 
 
