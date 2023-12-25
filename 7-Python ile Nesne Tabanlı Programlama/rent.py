@@ -102,8 +102,8 @@ class CarRent(VehicleRent):
 
 class BikeRent(VehicleRent):
 
-    def __init__(self):
-        pass
+    def __init__(self, stock):
+        super().__init__(stock)
 
 
 class Customer:
